@@ -6,6 +6,7 @@ Demo of the anilist (js list that uses [velocity](http://VelocityJS.org) library
 #### Setup
 1. Clone/fork it
 2. Bower install
+
 That's it
 
 #### Demo
