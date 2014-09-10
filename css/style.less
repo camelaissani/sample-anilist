@@ -1,0 +1,248 @@
+body {
+    background-color: #ececec;
+}
+
+// Font sizes
+@list-default-font-size: 12px;
+@list-title-font-size: 20px;
+@list-label-font-size: 12px;
+@list-price-font-size: 25px;
+@list-currency-font-size: 18px;
+@list-status-font-size: 14px;
+
+// Borders
+@list-row-border-color: #cfcdce;
+@list-row-border: 2px solid @list-row-border-color;
+@list-col-border: 1px solid lighten(@list-row-border-color, 10%);
+
+// Colors
+@list-background-color: #f9f9f9;
+@list-default-color: #a5a5a5;
+@list-title-color: #428bca; //#fa5331;
+@list-label-color: lighten(#a5a5a5, 5%); //#99c16b;
+@list-selection-color: #428bca;
+@list-hover-color: lighten(@list-selection-color, 25%);
+@list-noselection-color: @list-row-border-color;
+.about {
+    position: fixed;
+    top:0;
+    right:0;
+    background-color: gray;
+    color: white;
+
+    a {
+        color: white;
+    }
+
+    padding: 5px;
+}
+.filterbar {
+    margin-top: 32px;
+}
+.list {
+    position: relative;
+    padding-top: 50px + 5px;
+}
+
+.container {
+}
+
+.list-form .list-form-view,
+.list-form-navbar,
+.list-content-selection-label {
+    display: none;
+}
+.list-navbar,
+.list-form-navbar {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    display: none;
+
+    background-color: @list-selection-color;
+    .navbar-nav li {
+        & a {
+            color : #efefef;
+
+            &:hover,
+            &:focus {
+                color : #fff;
+            }
+        }
+        &.active a,
+        &.dropdown.open {
+            color: #333;
+            background-color: #fff;
+        }
+    }
+}
+
+.list-navbar {
+    opacity: 0;
+}
+
+.list-form-navbar {
+    .navbar-text {
+        color: #fff;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .navbar-btn {
+        margin-left: 10px; 
+    }
+
+    .navbar-btn:last-child {
+        margin-left: 0;    
+    }
+}
+
+.row.list-row {
+    position: relative;
+    display: table;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    padding: 2px;
+   
+    border: @list-row-border;
+    border-radius: 10px;
+
+    background-color: @list-background-color;
+    color: @list-default-color;
+    font-size: @list-default-font-size;
+
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &:not(.active):hover {
+        border-color: @list-hover-color;
+    }
+    &:not(.active):hover .list-selection-bar {
+        background-color: @list-hover-color;
+    }
+
+    &.active:not(.fixed) {
+        border-color: @list-selection-color;
+    }
+    &.active:not(.fixed) .list-selection-bar {
+        background-color: @list-selection-color;
+    }
+
+    a {
+        color: @list-default-color;
+    }
+
+    small {
+        font-size: 80%;
+    }
+}
+.list-selection-bar{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 15px;
+    height: 100%;
+
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+
+    background-color: @list-noselection-color;
+}
+.list-comment-link {
+    position: absolute;
+    right:10px;
+    top : 5px;
+}
+.list-title {
+    color: @list-title-color;
+    font-size: @list-title-font-size;
+    font-weight: bold;
+    //padding-bottom: 10px;
+}
+.list-col[class*="col-"] ,
+.list-avatar-col[class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+.list-avatar-col[class*="col-"] {
+    vertical-align: middle;
+}
+.list-col {
+    border-left: @list-col-border;
+
+    .list-row &:nth-child(3) {
+        border-left: none;
+    }
+}
+
+.list-label,
+.list-header-label {
+    text-transform: uppercase;
+    color: @list-label-color;
+    font-size: @list-label-font-size;
+}
+.list-header-label {
+    text-align: center;
+    padding-top: @list-title-font-size - @list-label-font-size;
+    //padding-bottom: 10px;
+}
+.list-flag {
+    display: block;
+    font-size: @list-status-font-size;
+    width: 112px;
+    padding: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+
+    &.danger {
+        background-color: lighten(@list-default-color, 10%);//#d9534f;
+    }
+    &.success {
+        background-color: #5cb85c;
+    }
+    &.warning {
+        background-color: #f0ad4e;
+    }
+}
+//.list-element:not(:last-child) {
+//    padding-bottom: 5px;
+//}
+.list-price-label {
+    display: inline;
+    position: relative;
+    font-size:  @list-price-font-size;
+
+    color: lighten(@list-default-color, 10%);
+
+    padding-right: 5px;
+
+    &.success {
+        color: #5cb85c;
+        font-weight: bold;
+    }
+    &.warning {
+        color: #f0ad4e;
+        font-weight: bold;
+    }
+}
+.list-currency-label {
+    font-size: @list-currency-font-size;
+    position: absolute;
+    top:0;
+    right: -5px;
+}
+
+@media (max-width: 767px) { 
+    .list-title {
+        font-size: 18px;
+    }
+}

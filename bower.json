@@ -1,0 +1,37 @@
+{
+  "name": "sample-anilist",
+  "description": "Sample of anilist usage",
+  "version": "0.0.1",
+  "homepage": "",
+  "authors": [
+    { 
+      "name" : "Camel Aissani",
+      "homepage" : "http://www.nuageprive.fr/"
+    }
+  ],
+  "main": "./sample.html",
+  "keywords": [
+    "animation",
+    "jquery",
+    "animate",
+    "ui",
+    "velocity.js",
+    "velocityjs",
+    "javascript",
+    "list"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "*.json",
+    "LICENSE",
+    "*.md"
+  ],
+  "dependencies": {
+    "less": "1.7.5",
+    "jquery": "1.11.0",
+    "minivents-cuzzo": "1.2.0",
+    "handlebars": "2.0.0",
+    "bootstrap": "3.2.0",
+    "velocity": "1.0.0"
+  }
+}
