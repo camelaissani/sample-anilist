@@ -15,4 +15,4 @@ You can view the demo here: [DEMO](http://www.nuageprive.fr/sample-anilist/sampl
 
 #### About me
 
-Have a look to [my website](http://www.nuageprive.fr/)
+Have a look at [my website](http://www.nuageprive.fr/)
