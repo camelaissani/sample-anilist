@@ -1,7 +1,7 @@
 sample-anilist
 ==============
 
-Demo of the anilist (js list that uses [velocity](http://VelocityJS.org) library).
+Demo of the anilist (js list using [velocity](http://VelocityJS.org) library).
 
 #### Setup
 1. Clone/fork it
@@ -11,7 +11,7 @@ That's it
 
 #### Demo
 
-You can view the demo here: http://www.nuageprive.fr/sample-anilist/sample.html
+You can view the demo here: [DEMO](http://www.nuageprive.fr/sample-anilist/sample.html)
 
 #### About me
 
